@@ -26,3 +26,8 @@ jobs:
         env:
           input1: ${{ inputs.input1 }}
           input2: ${{ inputs.input2 }}
+      - name: Hello World with Inputs
+        shell: python
+        run: |
+          x = ("apple", "banana", "cherry")
+          print(x)

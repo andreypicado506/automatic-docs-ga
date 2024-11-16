@@ -21,8 +21,6 @@ jobs:
       run: |
         echo "'${{ env.SONARQUBE_PARAMETERS }}'"
         echo "${{ env.SONARQUBE_PARAMETERS }}" | hexdump -C
-        echo "git env > '$GITHUB_ENV'"
-        cat "$GITHUB_ENV"
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:
@@ -30,7 +28,4 @@ jobs:
         SONAR_HOST_URL: "http://143.198.112.133:9000/"
       with:
         args: >
-          -Dsonar.projectKey=automatic-docs-ga
-          -Dsonar.debug=true
-          -Dsonar.sources=.
-          -Dsonar.projectName=automatic-docs-ga
+          ${{ env.SONARQUBE_PARAMETERS }}

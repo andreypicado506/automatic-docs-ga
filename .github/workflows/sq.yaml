@@ -16,6 +16,9 @@ jobs:
       run: |
         "$GITHUB_WORKSPACE/.github/workflows/sq/sq-args.sh" #./sq/sq.args.sh
         echo "${{ env.SONARQUBE_PARAMETERS }}"
+    - name: Prinv var
+      shell: bash
+      run: echo "${{ env.SONARQUBE_PARAMETERS }}"
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:

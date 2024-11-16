@@ -31,5 +31,5 @@ sonarqube_parameters="${sonarqube_parameters[*]}"
 echo ">> '$sonarqube_parameters'" | hexdump -C
 
 echo 'SONARQUBE_PARAMETERS<<EOF' >> $GITHUB_ENV
-echo $sonarqube_parameters >> $GITHUB_ENV 
+echo "$sonarqube_parameters" >> $GITHUB_ENV 
 echo 'EOF' >> $GITHUB_ENV

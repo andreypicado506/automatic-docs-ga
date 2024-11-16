@@ -21,6 +21,8 @@ jobs:
       run: |
         echo "'${{ env.SONARQUBE_PARAMETERS }}'"
         echo "${{ env.SONARQUBE_PARAMETERS }}" | hexdump -C
+        echo "git env > '$GITHUB_ENV'"
+        cat "$GITHUB_ENV"
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:

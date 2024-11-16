@@ -13,7 +13,7 @@ jobs:
         fetch-depth: 0
     - name: Set SonarQube parameters
       shell: bash
-      run: echo "$GITHUB_WORKSPACE" #./sq/sq.args.sh
+      run: "$GITHUB_WORKSPACE/.github/workflows/sq/sq-args.sh" #./sq/sq.args.sh
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:

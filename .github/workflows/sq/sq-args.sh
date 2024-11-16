@@ -25,4 +25,9 @@ else
 fi
 
 echo "SonarQube parameters: ${sonarqube_parameters[*]}"
+
+echo 'SONARQUBE_PARAMETERS<<EOF' >> $GITHUB_OUTPUT
+echo ${sonarqube_parameters[*]} >> $GITHUB_OUTPUT
+echo 'EOF' >> $GITHUB_OUTPUT
+
 echo "SONARQUBE_PARAMETERS=${sonarqube_parameters[*]}" >> $GITHUB_ENV

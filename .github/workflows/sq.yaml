@@ -19,3 +19,5 @@ jobs:
       with:
         args: >
           -Dsonar.projectKey=automatic-docs-ga
+          -Dsonar.branch.name=main
+          -Dsonar.debug=true

@@ -24,7 +24,8 @@ else
     sonarqube_parameters+=("-Dsonar.projectBaseDir=.")
 fi
 
-echo "SonarQube parameters: ${sonarqube_parameters[*]}"
+echo "SonarQube parameters:" 
+echo "'${sonarqube_parameters[*]}'"
 
 echo 'SONARQUBE_PARAMETERS<<EOF' >> $GITHUB_OUTPUT
 echo ${sonarqube_parameters[*]} >> $GITHUB_OUTPUT

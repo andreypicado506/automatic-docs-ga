@@ -18,7 +18,9 @@ jobs:
         echo "${{ env.SONARQUBE_PARAMETERS }}"
     - name: Prinv var
       shell: bash
-      run: echo "${{ env.SONARQUBE_PARAMETERS }}"
+      run: |
+        echo "'${{ env.SONARQUBE_PARAMETERS }}'"
+        echo "${{ env.SONARQUBE_PARAMETERS }}" | hexdump -C
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:

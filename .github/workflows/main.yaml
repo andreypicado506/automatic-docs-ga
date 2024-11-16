@@ -1,6 +1,19 @@
 name: Hello World Action
 
 on:
+  workflow_call:
+    inputs:
+      input1:
+        description: 'The first input'
+        required: true
+        default: 'First Input Value'
+        type: string
+
+      input2:
+        description: 'The second input'
+        required: true
+        default: 'Second Input Value'
+        type: string
   workflow_dispatch:
     inputs:
       input1:
@@ -26,3 +39,4 @@ jobs:
         env:
           input1: ${{ inputs.input1 }}
           input2: ${{ inputs.input2 }}
+

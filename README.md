@@ -1,1 +1,1 @@
-# automatic-docs-ga
+<!-- action-docs-all source="/home/zaratustra/andrey-dev/automatic-docs-ga/.github/actions/prueba/action.yaml" -->

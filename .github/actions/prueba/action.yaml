@@ -1,0 +1,19 @@
+name: "Hello World Action"
+description: "A simple GitHub Action to print Hello World with two inputs."
+author: "Your Name"
+inputs:
+  input1:
+    description: "The first input"
+    required: true
+    default: "First Input Value"
+  input2:
+    description: "The second input"
+    required: true
+    default: "Second Input Value"
+runs:
+  using: "composite"
+  steps:
+    - name: Hello World with Inputs
+      run: |
+        echo "Hello, World! Input1 is: ${{ inputs.input1 }} and Input2 is: ${{ inputs.input2 }}"
+      shell: bash

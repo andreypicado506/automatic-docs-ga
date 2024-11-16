@@ -13,7 +13,7 @@ jobs:
         fetch-depth: 0
     - name: Set SonarQube parameters
       shell: bash
-      run: ./sq/sq.args.sh
+      run: ls -alt #./sq/sq.args.sh
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:

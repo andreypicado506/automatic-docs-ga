@@ -5,7 +5,6 @@ sq_debug="true"
 sq_sources="."
 sq_project_name="automatic-docs-ga-project"
 sq_project_base_dir="."
-IFS=$'\n'
 
 sonarqube_parameters=()
 random_number=$(( RANDOM % 10 + 1 ))

@@ -38,5 +38,4 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: "http://143.198.112.133:9000/"
       with:
-        args: >
-          ${{ env.SONARQUBE_PARAMETERS }}
+        args: ${{ env.SONARQUBE_PARAMETERS }}

@@ -28,4 +28,27 @@ jobs:
         SONAR_HOST_URL: "http://143.198.112.133:9000/"
       with:
         args: >
+          -Dsonar.projectKey=automatic-docs-ga
+          -Dsonar.debug=true
+          -Dsonar.sources=.
+          -Dsonar.projectName=automatic-docs-ga
+
+    - name: SonarQube Scan Bis
+      uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: "http://143.198.112.133:9000/"
+      with:
+        args: >
+          -Dsonar.projectKey=automatic-docs-ga
+          -Dsonar.debug=true
+          -Dsonar.sources=.
+          -Dsonar.projectName=automatic-docs-ga
+    - name: SonarQube Scan
+      uses: sonarsource/sonarqube-scan-action@v4.0.0 # Ex: v2.1.0, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: "http://143.198.112.133:9000/"
+      with:
+        args: >
           ${{ env.SONARQUBE_PARAMETERS }}
